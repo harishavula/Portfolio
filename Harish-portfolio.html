@@ -7,10 +7,10 @@
     <title>Harish Yadav</title>
     <style>
         
-        #gallery{
+        /* #gallery{
 
             display:none;
-        }
+        } */
         :root {
             --bg: #0a0a0a;
             --card: #141210;
@@ -1283,6 +1283,26 @@
             try {var d = window.claude && await window.claude.use("downloads"); if (d) {await d.save({filename: "Harish_A_Resume.pdf", data: b}); return } } catch (e) {if (e && e.code === "declined") return }
             window.open(URL.createObjectURL(b), "_blank")
         });
+    </script>
+
+    <!-- Basic shortcut deterrent only; cannot secure browser-delivered source code. -->
+    <script>
+    (() => {
+        document.addEventListener('keydown', (event) => {
+            const key = (event.key || '').toLowerCase();
+            const ctrlOrCmd = event.ctrlKey || event.metaKey;
+            const blocked =
+                key === 'f12' ||
+                (ctrlOrCmd && ['u', 'i'].includes(key)) ||
+                (ctrlOrCmd && event.shiftKey && ['i', 'j', 'c'].includes(key));
+            if (blocked) {
+                event.preventDefault();
+                event.stopPropagation();
+                return false;
+            }
+        }, true);
+        document.addEventListener('contextmenu', (event) => event.preventDefault());
+    })();
     </script>
 </body>
 
